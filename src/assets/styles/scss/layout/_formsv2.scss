@@ -1,0 +1,45 @@
+@import "themes/theme";
+
+.form-container-v2 {
+  display: grid;
+  width: 100%;
+
+  .form-group-v2 {
+    position: relative;
+    //margin-bottom: 16px;
+    //margin-top: 4px;
+    border: 1px solid theme-palette-color('grays', 200);
+    border-radius: 16px;
+
+    .form-input-v2 {
+      width: 100%;
+      background: none;
+      color: theme-palette-color('font', 'title');
+      font-size: 14px;
+      padding: 0 10px;
+      border: none;
+      outline: none;
+      font-family: "Fredoka", sans-serif;
+      height: 38px;
+      cursor: text;
+      border-radius: 10px;
+      text-align: center;
+    }
+  }
+}
+
+.btn-generic {
+  width: 100%;
+  padding: 8px 14px;
+  background: theme-palette-color('color', 'hover');
+  border-radius: 16px;
+  outline: none;
+  border: none;
+  color: theme-palette-color('color', 'white');
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-generic:hover {
+  background: #fa814d;
+}

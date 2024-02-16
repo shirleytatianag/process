@@ -1,0 +1,321 @@
+.form-input-outline {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  order: 1;
+  padding: 14px;
+  border: none;
+  outline: 1px solid theme-palette-color('grays', 300);
+  border-radius: 4px;
+  color: theme-palette-color('font', 'title');
+
+  &:focus {
+    outline: 2px solid theme-palette-color('color', 'primary');
+  }
+}
+
+.mat-datepicker-clear {
+  display: inline-block;
+  position: absolute;
+  right: calc(50% - 32px);
+  margin-top: -2px !important;
+  color:red;
+}
+
+.form-container {
+  display: grid;
+  width: 100%;
+
+  .form-group {
+    position: relative;
+    margin-bottom: 16px;
+    margin-top: 4px;
+
+    .form-input {
+      width: 100%;
+      background: none;
+      color: theme-palette-color('font', 'title');
+      font-size: 14px;
+      padding: 10px;
+      border: none;
+      outline: none;
+      border-bottom: 1px solid theme-palette-color('grays', 600);
+      //font-family: $font-family;
+      height: 38px;
+      cursor: text;
+      border-radius: 4px 4px 0 0;
+    }
+
+    .form-label {
+      display: inline-block;
+      color: theme-palette-color('font', 'title');
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .form-line {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: theme-palette-color('color', 'primary');
+      transform: scale(0);
+      transform-origin: left bottom;
+      transition: transform .4s;
+    }
+
+    .form-input:focus ~ .form-line {
+      transform: scale(1);
+    }
+
+    .input-img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 38px;
+      width: 32px;
+      padding: 10px 10px 10px 4px;
+      cursor: none;
+    }
+
+    .input-error {
+      border-color: red !important;
+    }
+
+    .input-error ~ .form-line {
+      background: red  !important;
+    }
+
+
+    .input-error ~ .input-img {
+      display: block !important;
+    }
+
+    .input-error-custom {
+      border-bottom-color: red !important;
+    }
+
+    .input-error-custom ~ .form-line {
+      background: red !important;
+    }
+
+
+    .input-error-custom ~ .input-img {
+      display: block !important;
+    }
+
+    .input-icon {
+      color: theme-palette-color('grays', 600);
+      position: absolute;
+      right: 0;
+      height: 37.1px;
+      width: 32px;
+      cursor: pointer;
+      padding: 10px 10px 10px 4px;
+
+      em {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .form-group-secondary {
+    position: relative;
+    margin-bottom: 8px;
+    margin-top: 4px;
+    display: flex;
+    flex-direction: column;
+
+    .form-group-phone {
+      display: flex;
+      gap: 10px;
+
+      .phone {
+        width: 90px;
+        background: white;
+        outline: .5px solid theme-palette-color('grays', 300);
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        img {
+          width: 30px;
+        }
+
+        span {
+          font-size: 14px;
+          color: inherit;
+        }
+      }
+
+      input {
+        flex: 1;
+      }
+    }
+
+    .form-input-secondary {
+      width: 100%;
+      background: none;
+      color: theme-palette-color('font', 'title');
+      font-size: 14px;
+      padding: 10px;
+      border: none;
+      outline: .5px solid theme-palette-color('grays', 300);
+      //font-family: $font-family;
+      cursor: text;
+      border-radius: 4px;
+
+      &:focus {
+        outline: 2px solid theme-palette-color('color', 'primary');
+
+        &:not(.input-error) {
+          outline-color: theme-palette-color('color', 'primary');
+          color: theme-palette-color('color', 'primary');
+
+          ~ .form-label-secondary {
+            color: theme-palette-color('color', 'primary');
+          }
+        }
+      }
+    }
+
+    .form-label-secondary {
+      order: -1;
+      display: inline-block;
+      color: theme-palette-color('font', 'title');
+      font-size: 12px;
+      font-weight: 500;
+      margin: 0 0 4px 4px;
+    }
+  }
+
+  .form-group-checkbox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+}
+
+.form-check {
+  display: block;
+  margin-bottom: 10px;
+}
+
+//input {
+//  font-family: $font-family;
+//}
+
+.datepicker-primary {
+
+  .form-input {
+    margin-top: 0 !important;
+    width: -webkit-fill-available !important;
+    height: auto !important;
+  }
+
+  .button {
+    position: absolute;
+    right: 0;
+    top: 22px;
+  }
+}
+
+.datepicker {
+  //margin-top: 5px !important;
+
+  .form-input {
+    margin-top: 0 !important;
+    width: -webkit-fill-available !important;
+    height: auto !important;
+  }
+
+  .button {
+    position: absolute;
+    right: 0;
+    top: 22px;
+  }
+}
+
+.password-validate {
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    .item-validate {
+      display: inline-flex;
+      color: theme-palette-color('grays', '600');
+      margin-bottom: 6px;
+      width: 100%;
+
+      em {
+        margin-right: 4px;
+      }
+
+      span {
+        font-size: 12px;
+        font-weight: 400;
+      }
+    }
+
+    .validate-check {
+      color: green;
+
+      .characters {
+        color: green !important;
+      }
+    }
+
+    .validate-error {
+      color:red;
+    }
+  }
+}
+
+mat-checkbox {
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+.characters {
+  color: theme-palette-color('color', 'secondary');
+  font-weight: bolder !important;
+}
+
+.input-select-mix {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+
+  .input-iso {
+    flex: 1;
+  }
+
+  .form-group {
+    margin-bottom: 0;
+    margin-top: 0;
+    flex: 3;
+  }
+}
+
+.ng-dropdown-panel.ng-select-bottom {
+  margin-top: 1px !important;
+}
+
+
+.ngx-mat-timepicker-meridian {
+  button {
+    font-size: 14px;
+    font-weight: 600;
+
+    &:hover {
+      color: white;
+      background-color: theme-palette-color('color', 'primary');
+    }
+  }
+}

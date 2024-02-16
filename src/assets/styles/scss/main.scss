@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+//1. Layouts
+@import 'layout/forms';
+@import "layout/formsv2";
+
+//2. Theme palette colors
+@import "themes/theme";
+
+//3. Vendors
+@import "vendors/normalize";
+
+//3. PrimeFlex
+@import "primeflex/primeflex.css";
